@@ -50,7 +50,7 @@ app.get("/api/analytics/:year", async (req, res)=>{
         FROM 
             [dbo].[salaries]
         WHERE 
-            [work_year] = ${year}  -- Replace 2022 with the selected year
+            [work_year] = ${year}
         GROUP BY 
             [job_title]
         ORDER BY 
