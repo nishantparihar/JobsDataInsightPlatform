@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Table } from "antd";
 import { Modal, Spin } from "antd";
-
+import { columns, columnsYear } from './dataColumns';
 
 import './App.css'
 import axios from 'axios';
@@ -18,7 +18,7 @@ function App() {
   useEffect(()=>{
         try{
 
-          axios.get("http://localhost:3000/api/basictable")
+          axios.get(`${import.meta.env.VITE_Server}api/basictable`)
           .then((res)=>{
               setData(res.data);
           })
@@ -32,7 +32,7 @@ function App() {
   useEffect(()=>{
     try{
 
-      axios.get(`http://localhost:3000/api/analytics/${year}`)
+      axios.get(`${import.meta.env.VITE_Server}api/analytics/${year}`)
       .then((res)=>{
           setYearData(res.data);
       })
@@ -40,42 +40,8 @@ function App() {
     }catch(e){
         console.log(e);
     }
-}, [year])
+  }, [year])
   
-  const columns = [
-    {
-      title: 'Year',
-      dataIndex: 'Year',
-      key: 'Year',
-      sorter: (a, b) => a.Year - b.Year,
-    },
-    {
-      title: 'Total Jobs',
-      dataIndex: 'Total_Jobs',
-      key: 'Total_Jobs',
-      sorter: (a, b) => a.Total_Jobs - b.Total_Jobs,
-    },
-    {
-      title: 'Average Salary (USD)',
-      dataIndex: 'Average_Salary_USD',
-      key: 'Average_Salary_USD',
-      sorter: (a, b) => a.Average_Salary_USD - b.Average_Salary_USD,
-    },
-  ];
-
-  const columnsYear = [
-    {
-      title: 'Job Title',
-      dataIndex: 'job_title',
-      key: 'job_title',
-    },
-    {
-      title: 'Job Count',
-      dataIndex: 'Job_Count',
-      key: 'Job_Count',
-      sorter: (a, b) => a.Job_Count - b.Job_Count,
-    },
-  ];
   
   const onRowClick = (r, i) => {
     return {onClick: () => showModal(r.Year)}
