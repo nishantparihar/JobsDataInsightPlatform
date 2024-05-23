@@ -2,6 +2,12 @@
 
 JobsDataInsightPlatform is a MERN (MongoDB, Express, React, Node.js) Stack application designed to provide insightful data about job trends and analytics. This repository contains both the frontend and backend code necessary to run the application.
 
+
+## Dataset Used: Machine Learning Engineer Salary Insights 2024
+
+This application leverages the [Machine Learning Engineer Salary Insights 2024](https://www.kaggle.com/datasets/chopper53/machine-learning-engineer-salary-in-2024) dataset to analyze and visualize salary trends for Machine Learning Engineers. The dataset includes key attributes such as experience level, employment type, job title, salary (in local currency and USD), employee residence, remote work ratio, company location, and company size.
+
+
 ## File Structure
 
 ```
@@ -86,6 +92,11 @@ Ensure you have the following installed:
 
 Once the servers are running, you can access the application in your browser at `http://localhost:3000` for the frontend and `http://localhost:5000` for the backend API.
 
+
+## Deployment
+
+The application is deployed and can be accessed at [Jobs Data Insight Platform](https://jobs-data-insight-platform.vercel.app/).
+
 ## Contributing
 
 1. Fork the repository.
@@ -106,10 +117,7 @@ Once the servers are running, you can access the application in your browser at 
 ```   
 5. Open a pull request.
 
-## License
-
-This project is licensed under the MIT License.
 
 ## Contact
 
-For any inquiries, please contact the repository owner.
+For any questions or feedback, please contact [Nishant Singh Parihar](https://www.linkedin.com/in/nishant-singh-parihar-617b23169/).
