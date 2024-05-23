@@ -4,7 +4,7 @@ JobsDataInsightPlatform is a MERN (MongoDB, Express, React, Node.js) Stack appli
 
 ## File Structure
 
-
+```
 JobsDataInsightPlatform/
 ├── backend/
 │   ├── .gitignore
@@ -25,7 +25,7 @@ JobsDataInsightPlatform/
 │   ├── src/
 │       └── [source code files]
 └── README.md
-
+```
 
 ## Prerequisites
 
