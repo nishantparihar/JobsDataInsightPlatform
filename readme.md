@@ -1,4 +1,4 @@
-# JobsDataInsightPlatform
+# Jobs Data Insight Platform
 
 JobsDataInsightPlatform is a MERN (MongoDB, Express, React, Node.js) Stack application designed to provide insightful data about job trends and analytics. This repository contains both the frontend and backend code necessary to run the application.
 
